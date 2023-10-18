@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-@import './nav-bar/nav-bar.css';
+@import './nav-bar.css';
 
 * {
   box-sizing: border-box;

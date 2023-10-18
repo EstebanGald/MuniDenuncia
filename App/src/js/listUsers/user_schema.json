@@ -9,7 +9,7 @@
             "type":"string"
         },
         "permisos": {
-            "type":"boolean"
+            "type":"integer"
         }
     },
     "required": ["username","password","permisos"]

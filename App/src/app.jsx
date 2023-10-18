@@ -1,7 +1,7 @@
-//Importa las funcionalidades de js
+import "./stylesheet/app.css"
 
 function App() {
-
+    
 }
 
-export default App
+export default App;

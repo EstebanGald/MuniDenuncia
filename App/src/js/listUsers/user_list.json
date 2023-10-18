@@ -3,32 +3,32 @@
         {
             "username": "usuario1",
             "password": "1111",
-            "permisos": false
+            "permisos": 0
         },
         {
             "username": "usuario2",
             "password": "2222",
-            "permisos": false
+            "permisos": 0
         },
         {
             "username": "usuario3",
             "password": "3333",
-            "permisos": false
+            "permisos": 0
         },
         {
             "username": "admin1",
             "password": "aaaa",
-            "permisos": true
+            "permisos": 1
         },
         {
             "username": "admin2",
             "password": "bbb",
-            "permisos": true
+            "permisos": 1
         },
         {
             "username": "admin3",
             "password": "cccc",
-            "permisos": true
+            "permisos": 1
         }
     ]
 }
