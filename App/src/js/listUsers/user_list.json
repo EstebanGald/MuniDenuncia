@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "username": "usuario1",
+            "password": "1111",
+            "permisos": false
+        },
+        {
+            "username": "usuario2",
+            "password": "2222",
+            "permisos": false
+        },
+        {
+            "username": "usuario3",
+            "password": "3333",
+            "permisos": false
+        },
+        {
+            "username": "admin1",
+            "password": "aaaa",
+            "permisos": true
+        },
+        {
+            "username": "admin2",
+            "password": "bbb",
+            "permisos": true
+        },
+        {
+            "username": "admin3",
+            "password": "cccc",
+            "permisos": true
+        }
+    ]
+}
