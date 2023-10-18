@@ -1,17 +1,18 @@
 {
-  "name": "frontend-sample-app",
-  "version": "0.1.0",
-  "description": "Basic Frontend Development Environment to start an app with Webpack",
+  "name": "munidenuncias-app",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Aplicacion en la cual vecinos de una comuna podran Generar Denuncias sobre el estado de su municipalidad y los servicios publicos que ofrece",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexarenasf/frontend-sample-app"
+    "url": "https://github.com/EstebanGald/MuniDenuncia.git"
   },
   "scripts": {
     "prod": "webpack --mode=production",
     "dev": "webpack serve --mode=development"
   },
-  "author": "alexarenasf",
+  "author": "Sebastian Meneses - Fransisco Muñoz - Esteban Carrasco",
   "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.10.5",
