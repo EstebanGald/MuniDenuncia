@@ -1,10 +1,10 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { LoginPage, estaLogeado } from "./login/login";
-import { RegisterPage, estaRegistrado } from "./login/register";
-import { UserMainPage } from "./user/indexUser";
-import { AdminMainPage } from "./admin/indexAdmin";
-import { UserOBJ } from "../js/user_functions/login.js";
-import { EsAdmin } from "../js/user_functions/user_checks.js";
+import { LoginPage, estaLogeado } from "./VentanasAcceso/login";
+import { RegisterPage, estaRegistrado } from "./VentanasAcceso/register";
+import { UserMainPage } from "./VentanasUsuarios/indexUser";
+import { AdminMainPage } from "./VentanasAdministradores/indexAdmin";
+import { UserOBJ } from "../js/access_functions/login.js";
+import { EsAdmin } from "../js/access_functions/user_checks.js";
 
 /*
 //Define un Controlador del Estado del Usuario, el cual contiene:

@@ -1,0 +1,7 @@
+@import url(https://api.geoapify.com/v1/icon/?type=material&color=red&icon=cloud&iconType=awesome&apiKey=YOUR_API_KEY
+);
+
+.denucia-marker{
+    
+    background-color: white;
+}

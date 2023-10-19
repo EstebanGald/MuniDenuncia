@@ -4,13 +4,9 @@
   "version": "0.0.1",
   "description": "Aplicacion en la cual vecinos de una comuna podran Generar Denuncias sobre el estado de su municipalidad y los servicios publicos que ofrece",
   "main": "src/main.jsx",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/EstebanGald/MuniDenuncia.git"
-  },
   "scripts": {
     "prod": "webpack --mode=production",
-    "dev": "webpack serve --mode=development"
+    "dev": "webpack serve --config ./webpack.config.js"
   },
   "author": "Sebastian Meneses - Fransisco Muñoz - Esteban Carrasco",
   "license": "MIT",
@@ -21,7 +17,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
-    "react-router-dom": "^6.4.0"
+    "react-router-dom": "^6.4.0",
+    "sweetalert2": "^11.7.32"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
