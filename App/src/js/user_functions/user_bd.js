@@ -1,6 +1,6 @@
 //Datos Iniciales que se conocen (tipo BD estatica)
-export const user_schema= require('../listUsers/user_schema.json');
-export const user_bd= require('../listUsers/user_list.json');
+export const user_schema= require('./user_schema.json');
+export const user_bd= require('./user_list.json');
 
 //Listado de usuarios utilizado de manera local que seran utilizados ("BD" local)
 export let usuarios= JSON.parse(jsonArray);
@@ -24,18 +24,6 @@ export function UserToObjWithSchema(user,psw,esAdmin) {
     return obj;
 }
 
-//Ve si un usuario existe en la lista y retorna un booleano que indica esto
-export function CheckUserInList(userObj) {
-    usuarios.forEach((element, index) => {
-        if (JSON.stringify(element) === JSON.stringify(userObj)) {
-            console.log("Object exist at index %d",index);
-            return true;
-        }
-        });
-    console.log("User is not save in list");
-    return false;
-}
-
 //Agrega un usuario nuevo a la lista de usuarios
 export function AddNewUser(userObj) {
     console.log("Usuario que se desea agregar:",userObj);
@@ -51,9 +39,33 @@ export function AddNewUser(userObj) {
     PrintingUsers();
 }
 
+//Ve si un objeto usuario existe en la lista y retorna un booleano que indica esto
+export function CheckUserInList(userObj) {
+    usuarios.forEach((element, index) => {
+        const fields_saved= Object.keys(element);
+        const fields_new= Object.keys(userObj);
+        if(fields_saved.length!= fields_new.length){
+            console.log("UserOBJ posee una cantidad diferente de campos a los usados en la lista");
+            return false;
+        }
+        for(let k of fields_saved) {
+            let hasDiference= false;
+            if(element[k] != userObj[k]){
+                hasDiference= true;
+            }
+            if(hasDiference){
+                console.log("Object exist at index %d",index);
+                return true;
+            }
+        }
+    });
+    console.log("User is not save in list");
+    return false;
+}
+
 //Obtiene un userOBJ en el indice indicado si existe
 export function ObtainUserByIndex(indice){
-    var largo= usuarios.lenght();
+    let largo= usuarios.lenght();
     if(largo <= indice){
         console.log("Indice excede la cantidad actual de usuarios");
         return null
@@ -70,22 +82,4 @@ export function PrintingUsers() {
         var i= "{0}:".format(index);
         console.log(i,element);
     })
-}
-
-//Obtiene el nombre de un objeto usuario
-export function NombreDelUserOBJ(userOBJ){
-    console.log("Retornando el nombre del objeto usuario");
-    return userOBJ["username"];
-}
-
-//Obtiene el nombre de un objeto usuario
-export function PasswordDelUserOBJ(userOBJ){
-    console.log("Retornando la contraseña del objeto usuario");
-    return userOBJ["password"];
-}
-
-//Obtiene el nombre de un objeto usuario
-export function TipoDelUserOBJ(userOBJ){
-    console.log("Retornando el tipo de permiso del objeto usuario");
-    return userOBJ["permisos"];
 }
