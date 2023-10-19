@@ -1,1 +1,1 @@
-//Define un Marcador Icono
+//Define los objetos que indicaran los tipos de marcadores

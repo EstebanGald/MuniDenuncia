@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { loginUser, UserOBJ } from "../../js/access_functions/login.js";
+import Swal from "sweetalert2";
 import "../../js/access_functions/user_bd.js";
 import "../../stylesheet/login.css";
 
@@ -106,6 +107,7 @@ export function LoginPage(){
         let userLooked= UserToObjWithSchema(estado.username,estado.password,estado.permisos);
         const ok = await loginUser(userLooked.username,userLooked.password);
         if (!ok) {
+            Swal.fire("Error", "Verfique el usuario y contraseña", "error");
             console.log("Error: Verifique Usuario y/o Contraseña que sean validaz");
             userLooked=null;
         }else{
