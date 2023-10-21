@@ -5,6 +5,13 @@ App para realizar denuncias en tu municipalidad
 - Fransisco Muñoz: 201973581-0
 - Esteban Carrasco: 201773646-5
 # Importante
+## Ejecucion
+Para ejecutar la app se deben realizar los siguientes pasos:
+1. Acceder de la carpeta App, ya sea en terminal o por file explorer
+2. Dentro de la carpeta ejecutar el comando ***"npm install"*** y ***"npm run dev"***
+3. Acceder a la aplicacion mediante un navegador al link http://localhost:5050
+4. Una vez terminado el uso de la app ejecutar, dentenerla presionando en terminal las teclas ***'Ctrl + c'***
+5. Desinstalar los paquetes utilizados mediante el comando ***"rm -rf node_modules"***
 ## Estructura de carpetas
 - src: Contiene la aplicacion
     - assets: Contiene los elementos multimedia utilizados en la app
